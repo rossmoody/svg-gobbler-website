@@ -1,5 +1,5 @@
 {
-  "name": "tailwindui-salient",
+  "name": "svg-gobbler-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,6 +18,7 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
+    "dom-parser": "^1.1.5",
     "next": "13.4.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
