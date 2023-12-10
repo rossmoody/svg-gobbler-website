@@ -1,8 +1,7 @@
-import Link from 'next/link'
-
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -10,7 +9,7 @@ export function Footer() {
       <Container>
         <div className="py-16">
           <Logo className="mx-auto h-10 w-auto" />
-          <nav className="mt-10 text-sm" aria-label="quick links">
+          <nav aria-label="quick links" className="mt-10 text-sm">
             <div className="-my-1 flex justify-center gap-x-6">
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
@@ -21,9 +20,9 @@ export function Footer() {
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link
-              href="https://twitter.com"
-              className="group"
               aria-label="TaxPal on Twitter"
+              className="group"
+              href="https://twitter.com"
             >
               <svg
                 aria-hidden="true"
@@ -33,9 +32,9 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://github.com"
-              className="group"
               aria-label="TaxPal on GitHub"
+              className="group"
+              href="https://github.com"
             >
               <svg
                 aria-hidden="true"

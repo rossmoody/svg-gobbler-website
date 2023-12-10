@@ -1,6 +1,5 @@
-import Image from 'next/image'
-
 import backgroundImage from '@/images/background-auth.jpg'
+import Image from 'next/image'
 
 export function SlimLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,9 +12,9 @@ export function SlimLayout({ children }: { children: React.ReactNode }) {
         </div>
         <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
           <Image
+            alt=""
             className="absolute inset-0 h-full w-full object-cover"
             src={backgroundImage}
-            alt=""
             unoptimized
           />
         </div>
