@@ -1,35 +1,65 @@
-# Salient
+<div align="center">
+ <a href="https://svggobbler.com">
+  <img src="https://github.com/rossmoody/svg-gobbler/raw/main/assets/local/read-me.png">
+ </a>
+ <br>
+</div>
 
-Salient is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+## 🚀 Where to install
 
-## Getting started
+This extension is available on:
 
-To get started with this template, first install the npm dependencies:
+- [Chrome Web store](https://chrome.google.com/webstore/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch)
+- [Firefox Addon Marketplace (locked to v3)](https://addons.mozilla.org/firefox/addon/svg-gobbler/)
 
-```bash
-npm install
+---
+
+## Features
+
+SVG Gobbler is a browser extension that finds the SVG content in your current tab and lets you
+optimize, download, copy, edit, or export. This is the website that provides marketing and a small
+sample of the functionality.
+
+---
+
+## Local development
+
+### 1. Clone the repo
+
+Clone the repo to your local machine and navigate into the root directory.
+
+```shell
+cd svg-gobbler-website
 ```
 
-Next, run the development server:
+### 2. Install dependencies
+
+```shell
+npm i
+```
+
+### 3. Start and watch a build
 
 ```bash
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+---
 
-## Customizing
+## About
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+5 versions and 5+ years ago, this started as a pet project to improve the
+[SVG Crowbar](https://github.com/nytimes/svg-crowbar) tool that is no longer being maintained by NY
+Times.
 
-## License
+### Open source
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+This extension is open source and doesn't collect any information from users. It's free, and made
+available because I enjoy making useful things for the web. Please consider contributing with an
+idea, bug fix, or feature request.
 
-## Learn more
+---
 
-To learn more about the technologies used in this site template, see the following resources:
+## More apps by me
 
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+I like making things. [Check out what I'm up to lately](https://rossmoody.com).
