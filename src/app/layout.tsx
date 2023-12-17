@@ -6,10 +6,10 @@ import { PropsWithChildren } from 'react'
 
 export const metadata: Metadata = {
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and exporting SVGs like never before.',
   title: {
-    default: 'TaxPal - Accounting made simple for small businesses',
-    template: '%s - TaxPal',
+    default: 'SVG Gobbler - Find, optimize, organize, edit, and export SVGs like never before',
+    template: '%s - SVG Gobbler',
   },
 }
 

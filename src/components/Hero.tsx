@@ -1,9 +1,14 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { getHtml } from '@/server/get-html'
+import { useRef } from 'react'
+import { findSvg, svgFactory } from 'svg-gobbler-scripts'
+
+import { HeroSearch } from './HeroSearch'
 
 export function Hero() {
   return (
-    <Container className="h-[calc(100svh-120px)] pb-16 pt-20 text-center lg:pt-24">
+    <Container className="h-[calc(100svh-120px)] pb-16 pt-16 text-center lg:pt-24">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         SVG organization{' '}
         <span className="relative whitespace-nowrap text-red-600">
@@ -19,35 +24,18 @@ export function Hero() {
         </span>{' '}
         for designers & developers
       </h1>
-      <h2 className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+      <h2 className="mx-auto mt-6 max-w-3xl text-lg tracking-tight text-slate-700">
         SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and
-        exporting SVGs like never before. Try pasting a URL into the search bar below to see it in
-        action.
+        exporting SVGs like never before.{' '}
+        <a
+          className="text-red-500"
+          href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
+        >
+          Download the extension
+        </a>{' '}
+        or search a website below to see it in action.
       </h2>
-      <div className="mx-auto mt-10 flex max-w-2xl justify-center gap-x-6">
-        <div className="flex-grow">
-          <label className="sr-only" htmlFor="search-input">
-            Paste a URL
-          </label>
-          <input
-            className="w-full rounded-full"
-            id="search-input"
-            placeholder="https://github.com"
-          />
-        </div>
-      </div>
-      <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Get 6 months free</Button>
-        <Button href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" variant="outline">
-          <svg
-            aria-hidden="true"
-            className="h-3 w-3 flex-none fill-red-600 group-active:fill-current"
-          >
-            <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
-          </svg>
-          <span className="ml-3">Watch video</span>
-        </Button>
-      </div>
+      <HeroSearch />
     </Container>
   )
 }
