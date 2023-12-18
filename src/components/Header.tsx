@@ -95,7 +95,7 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link aria-label="Home" href="#">
-              <Logo className="hidden h-9 w-auto sm:inline" />
+              <Logo className="hidden h-8 w-auto sm:inline" />
               <Logomark className="h-9 w-auto sm:hidden" />
             </Link>
             <div className="hidden md:gap-x-6 lg:flex">
@@ -123,7 +123,7 @@ export function Header() {
                     fillRule="evenodd"
                   />
                 </svg>
-                Star on GitHub
+                GitHub
               </a>
             </div>
             <Button
@@ -131,7 +131,7 @@ export function Header() {
               href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
             >
               <span>
-                Download extension<span className="hidden lg:inline"> - free</span>
+                Download extension<span className="hidden lg:inline"> free</span>
               </span>
             </Button>
             <div className="-mr-1 md:hidden">

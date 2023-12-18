@@ -1,8 +1,4 @@
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { getHtml } from '@/server/get-html'
-import { useRef } from 'react'
-import { findSvg, svgFactory } from 'svg-gobbler-scripts'
 
 import { HeroSearch } from './HeroSearch'
 

@@ -1,12 +1,12 @@
 'use client'
 
-import { getHtml } from '@/server/get-html'
+import { getDocument } from '@/server/get-html'
 import { findSvg, svgFactory } from 'svg-gobbler-scripts'
 
 export default function Login() {
   const getDomClient = async () => {
     const origin = 'https://svggobbler.com'
-    const response = await getHtml(origin)
+    const response = await getDocument(origin)
     const dom = new DOMParser().parseFromString(response, 'text/html')
     const documentData = findSvg(dom)
     const svgData = await svgFactory.process({ ...documentData, origin })

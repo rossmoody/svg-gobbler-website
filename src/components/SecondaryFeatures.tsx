@@ -203,7 +203,7 @@ export function SecondaryFeatures() {
     <section
       aria-label="Features for simplifying everyday business tasks"
       className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
-      id="secondary-features"
+      id="features"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
