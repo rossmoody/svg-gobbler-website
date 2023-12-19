@@ -7,7 +7,6 @@ import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import Image, { type ImageProps } from 'next/image'
-import { useId } from 'react'
 
 interface Feature {
   description: string
@@ -20,86 +19,34 @@ interface Feature {
 const features: Array<Feature> = [
   {
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
-    icon: function ReportingIcon() {
-      let id = useId()
-      return (
-        <>
-          <defs>
-            <linearGradient
-              gradientUnits="userSpaceOnUse"
-              id={id}
-              x1="11.5"
-              x2={36}
-              y1={18}
-              y2="15.5"
-            >
-              <stop offset=".194" stopColor="#fff" />
-              <stop offset={1} stopColor="#6692F1" />
-            </linearGradient>
-          </defs>
-          <path
-            d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
-            stroke={`url(#${id})`}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-          />
-        </>
-      )
-    },
-    image: screenshotProfitLoss,
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
-  },
-  {
-    description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
-    icon: function InventoryIcon() {
-      return (
-        <>
-          <path
-            d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-            opacity=".5"
-          />
-          <path
-            d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-            opacity=".3"
-          />
-          <path
-            d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-          />
-        </>
-      )
-    },
+      'Find SVGs from any site with ease. Store, optimize, and organize them into collections for easy access.',
+    icon: () => <></>,
     image: screenshotInventory,
-    name: 'Inventory',
-    summary: 'Never lose track of what’s in stock with accurate inventory tracking.',
+    name: 'Find',
+    summary: 'Find SVGs from any site. Store, optimize, and organize them into collections',
   },
   {
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    icon: function ContactsIcon() {
-      return (
-        <>
-          <path
-            d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z"
-            fill="#fff"
-            opacity=".5"
-          />
-          <path
-            d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z"
-            fill="#fff"
-          />
-        </>
-      )
-    },
+      'Optimize, view, edit, and minify SVGs with SVGO. SVGs can be minified by removing unnecessary data, comments, and metadata manually in the editor.',
+    icon: () => <></>,
     image: screenshotContacts,
-    name: 'Contacts',
-    summary: 'Organize all of your contacts, service providers, and invoices in one place.',
+    name: 'Optimize',
+    summary:
+      'Optimize your SVGs to reduce file size and improve the performance of your product or app',
+  },
+  {
+    description:
+      'Export as SVG, PNG, WEBP, JPEG and various other formats. Transform SVGs into minified Data URIs or React components with SVGR.',
+    icon: () => (
+      <path
+        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    ),
+    image: screenshotProfitLoss,
+    name: 'Export',
+    summary: 'Easily export your SVGs in a variety of formats',
   },
 ]
 
@@ -114,8 +61,20 @@ function Feature({
 }) {
   return (
     <div className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')} {...props}>
-      <div className={clsx('w-9 rounded-lg', isActive ? 'bg-red-600' : 'bg-slate-500')}>
-        <svg aria-hidden="true" className="h-9 w-9" fill="none">
+      <div
+        className={clsx(
+          'flex h-9 w-9 items-center justify-center rounded-lg text-white',
+          isActive ? 'bg-red-600' : 'bg-slate-500',
+        )}
+      >
+        <svg
+          className="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <feature.icon />
         </svg>
       </div>
@@ -208,11 +167,10 @@ export function Features() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Manage your SVG assets
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you complicate your everyday
-            business tasks instead.
+            SVG Gobbler makes it easy to find, organize, edit, and export SVGs
           </p>
         </div>
         <FeaturesMobile />

@@ -1,12 +1,9 @@
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
-import Image from 'next/image'
 
 const faqs = [
   [
     {
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+      answer: 'Well no, but if you move your company offshore you can probably ignore it.',
       question: 'Does TaxPal handle VAT?',
     },
     {
@@ -28,14 +25,12 @@ const faqs = [
     {
       answer:
         'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+      question: 'TaxPal sounds horrible but why do I still feel compelled to purchase?',
     },
     {
       answer:
         'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+      question: 'I found other companies called TaxPal, are you sure you can use this name?',
     },
   ],
   [
@@ -63,14 +58,6 @@ export function Faqs() {
       className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
       id="faq"
     >
-      <Image
-        alt=""
-        className="absolute left-1/2 top-0 max-w-none -translate-y-1/4 translate-x-[-30%]"
-        height={946}
-        src={backgroundImage}
-        unoptimized
-        width={1558}
-      />
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
@@ -80,8 +67,8 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            If you can’t find what you’re looking for, email our support team and if you’re lucky
+            someone will get back to you.
           </p>
         </div>
         <ul

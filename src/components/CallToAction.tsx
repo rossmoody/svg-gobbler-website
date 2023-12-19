@@ -17,14 +17,18 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Get started today
+            Try SVG Gobbler
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
-            It’s time to take control of your books. Buy our software so you can feel like you’re
-            doing something productive.
+            SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and
+            exporting SVGs like never before.
           </p>
-          <Button className="mt-10" color="white" href="/register">
-            Get 6 months free
+          <Button
+            className="mt-10"
+            color="red"
+            href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
+          >
+            Install SVG Gobbler
           </Button>
         </div>
       </Container>

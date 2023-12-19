@@ -22,14 +22,7 @@ export function Hero() {
       </h1>
       <h2 className="mx-auto mt-6 max-w-3xl text-lg tracking-tight text-slate-700">
         SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and
-        exporting SVGs like never before.{' '}
-        <a
-          className="text-red-500"
-          href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
-        >
-          Download the extension
-        </a>{' '}
-        or search a website below to see it in action.
+        exporting SVGs like never before. Search a website below to see it in action.
       </h2>
       <HeroSearch />
     </Container>
