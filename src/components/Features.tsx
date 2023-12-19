@@ -198,7 +198,7 @@ function FeaturesDesktop() {
   )
 }
 
-export function SecondaryFeatures() {
+export function Features() {
   return (
     <section
       aria-label="Features for simplifying everyday business tasks"
