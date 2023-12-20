@@ -23,7 +23,7 @@ const features: Array<Feature> = [
     icon: () => <></>,
     image: screenshotInventory,
     name: 'Find',
-    summary: 'Find SVGs from any site. Store, optimize, and organize them into collections',
+    summary: 'Find SVGs from any site and organize them into collections',
   },
   {
     description:
@@ -31,8 +31,7 @@ const features: Array<Feature> = [
     icon: () => <></>,
     image: screenshotContacts,
     name: 'Optimize',
-    summary:
-      'Optimize your SVGs to reduce file size and improve the performance of your product or app',
+    summary: 'Reduce bundle size and improve the performance or your site or app',
   },
   {
     description:
@@ -46,7 +45,7 @@ const features: Array<Feature> = [
     ),
     image: screenshotProfitLoss,
     name: 'Export',
-    summary: 'Easily export your SVGs in a variety of formats',
+    summary: 'Easily export your SVGs in a variety of formats and sizes',
   },
 ]
 

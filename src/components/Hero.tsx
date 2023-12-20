@@ -4,7 +4,7 @@ import { HeroSearch } from './HeroSearch'
 
 export function Hero() {
   return (
-    <Container className="h-[calc(100svh-120px)] pb-16 pt-16 text-center lg:pt-24">
+    <Container className="min-h-[calc(100svh-120px)] pb-16 pt-16 text-center lg:pt-24">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         SVG organization{' '}
         <span className="relative whitespace-nowrap text-red-600">

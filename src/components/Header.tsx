@@ -55,7 +55,7 @@ export function Header() {
               href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
             >
               <span>
-                Download extension<span className="hidden lg:inline"> free</span>
+                Install extension<span className="hidden lg:inline"> free</span>
               </span>
             </Button>
             <div className="-mr-1 md:hidden">
