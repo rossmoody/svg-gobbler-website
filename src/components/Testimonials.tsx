@@ -11,60 +11,59 @@ const testimonials = [
     {
       author: {
         image: avatarImage1,
-        name: 'Sheryl Berge',
-        role: 'CEO at Lynch LLC',
+        name: 'Joyal',
+        role: 'Chrome Web Store Review',
       },
       content:
-        'TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.',
+        'This is the best extension to export SVGs compared to other extensions like SVG Grabber. Works smoothly. Nice UI.',
     },
     {
       author: {
         image: avatarImage4,
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
+        name: 'Lemongrove',
+        role: 'Firefox Add-ons Review',
       },
       content:
-        'I’m trying to get a hold of someone in support, I’m in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.',
+        "As a designer who often has to lay down on the floor and consider my life choices when trying to get my clients to send me vectorized logos, this already just in the first day I've had it has saved me hours of time!",
     },
   ],
   [
     {
       author: {
         image: avatarImage5,
-        name: 'Leland Kiehn',
-        role: 'Founder of Kiehn and Sons',
+        name: 'Mark Palmer',
+        role: 'Chrome Web Store Review',
       },
       content:
-        'The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.',
+        'Absolutely brilliant, as a graphic designer this makes it so easy to get logos quickly.',
     },
     {
       author: {
         image: avatarImage2,
-        name: 'Erin Powlowski',
-        role: 'COO at Armstrong Inc',
+        name: 'Chris Messina',
+        role: 'Chrome Web Store Review',
       },
       content:
-        'There are so many things I had to do with my old software that I just don’t do at all with TaxPal. Suspicious but I can’t say I don’t love it.',
+        "This is EXACTLY what I was looking for! It's so well done — and I love that it offers for optimized and un-optimized copy/download options.",
     },
   ],
   [
     {
       author: {
         image: avatarImage3,
-        name: 'Peter Renolds',
-        role: 'Founder of West Inc',
+        name: 'Justin Beasley',
+        role: 'Chrome Web Store Review',
       },
       content:
-        'I used to have to remit tax to the EU and with TaxPal I somehow don’t have to do that anymore. Nervous to travel there now though.',
+        'Love this extension, and find that it works far better than anything else in the Chrome Web Store. Unlike the other tools, it has a great UI that visually indicates file properties that may matter to you, and elegantly hands things like CORS restrictions.',
     },
     {
       author: {
         image: avatarImage4,
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
+        name: 'Edu Hermanns',
+        role: 'Chrome Web Store Review',
       },
-      content:
-        'This is the fourth email I’ve sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.',
+      content: 'This is brilliant, absolutely thank you.',
     },
   ],
 ]

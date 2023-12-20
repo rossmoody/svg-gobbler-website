@@ -1,6 +1,6 @@
 'use client'
 
-import { getDocument } from '@/server/get-html'
+import { getDocument } from '@/server/get-document'
 import clsx from 'clsx'
 import { FormEvent, useState } from 'react'
 import { SvgType, findSvg, svgFactory } from 'svg-gobbler-scripts'

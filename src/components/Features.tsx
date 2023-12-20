@@ -1,9 +1,9 @@
 'use client'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshotExport from '@/images/screenshots/export.jpg'
+import screenshotFind from '@/images/screenshots/find.jpg'
+import screenshotOptimize from '@/images/screenshots/optimize.jpg'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import Image, { type ImageProps } from 'next/image'
@@ -20,16 +20,28 @@ const features: Array<Feature> = [
   {
     description:
       'Find SVGs from any site with ease. Store, optimize, and organize them into collections for easy access.',
-    icon: () => <></>,
-    image: screenshotInventory,
+    icon: () => (
+      <path
+        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    ),
+    image: screenshotFind,
     name: 'Find',
     summary: 'Find SVGs from any site and organize them into collections',
   },
   {
     description:
       'Optimize, view, edit, and minify SVGs with SVGO. SVGs can be minified by removing unnecessary data, comments, and metadata manually in the editor.',
-    icon: () => <></>,
-    image: screenshotContacts,
+    icon: () => (
+      <path
+        d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    ),
+    image: screenshotOptimize,
     name: 'Optimize',
     summary: 'Reduce bundle size and improve the performance or your site or app',
   },
@@ -43,7 +55,7 @@ const features: Array<Feature> = [
         stroke-linejoin="round"
       />
     ),
-    image: screenshotProfitLoss,
+    image: screenshotExport,
     name: 'Export',
     summary: 'Easily export your SVGs in a variety of formats and sizes',
   },
