@@ -42,10 +42,6 @@ export const faqs: Faq[][] = [
       question: 'What is SVG Gobbler and how does it work?',
     },
     {
-      answer: 'Follow the link at the top of the page to install SVG Gobbler.',
-      question: 'How do I install SVG Gobbler on my browser?',
-    },
-    {
       answer:
         'Not at this time. SVG Gobbler is exclusively for finding SVG content in desktop web browser.',
       question: 'Is SVG Gobbler compatible with mobile browsers?',

@@ -1,10 +1,10 @@
 import { Container } from '@/components/Container'
 
-import { HeroSearch } from './HeroSearch'
+import { Button } from './Button'
 
 export function Hero() {
   return (
-    <Container className="min-h-[calc(100svh-120px)] pb-16 pt-16 text-center lg:pt-24">
+    <Container className="pb-16 pt-16 text-center lg:pt-24">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         SVG management{' '}
         <span className="relative whitespace-nowrap text-red-600">
@@ -20,18 +20,24 @@ export function Hero() {
         </span>{' '}
         for designers & developers
       </h1>
-      <h2 className="mx-auto mt-6 max-w-3xl text-lg tracking-tight text-slate-700">
-        A browser extension for finding, optimizing, organizing, editing, and exporting SVGs. Give
-        it a test drive by searching a website below. Get the full experience by{' '}
-        <a
-          className="text-red-500 hover:underline"
-          href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
-        >
-          installing the extension
-        </a>
-        .
+      <h2 className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+        SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and
+        exporting SVGs like never before.
       </h2>
-      <HeroSearch />
+      <div className="mt-10 flex justify-center gap-x-6">
+        <Button href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch">
+          Install SVG Gobbler
+        </Button>
+        <Button href="https://www.youtube.com/watch?v=nlIoidu232Q" variant="outline">
+          <svg
+            aria-hidden="true"
+            className="h-3 w-3 flex-none fill-red-600 group-active:fill-current"
+          >
+            <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
+          </svg>
+          <span className="ml-3">Watch video</span>
+        </Button>
+      </div>
     </Container>
   )
 }

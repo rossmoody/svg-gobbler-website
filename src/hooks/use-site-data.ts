@@ -2,13 +2,20 @@ import { getDocument } from '@/server/get-document'
 import { FormEvent, useState } from 'react'
 import { SvgType, findSvg, svgFactory } from 'svg-gobbler-scripts'
 
+type State = 'error' | 'initial' | 'loading' | 'success'
+
 export const useSiteData = () => {
-  const [loading, setLoading] = useState(false)
+  const [state, setState] = useState<State>('initial')
   const [svgData, setSvgData] = useState<SvgType[]>()
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setLoading(true)
+
+    // Reset state
+    setState('loading')
+    setSvgData(undefined)
+
+    // Get form data
     const formData = new FormData(e.currentTarget)
     const url = formData.get('search-input') as string
 
@@ -18,17 +25,17 @@ export const useSiteData = () => {
       const dom = new DOMParser().parseFromString(response, 'text/html')
       const documentData = findSvg(dom)
       const svgData = await svgFactory.process({ ...documentData, origin })
+      setState('success')
       setSvgData(svgData)
     } catch (e) {
       console.log('Error: ', e)
+      setState('error')
     }
-
-    setLoading(false)
   }
 
   return {
-    loading,
     onSubmit,
+    state,
     svgData,
   }
 }
