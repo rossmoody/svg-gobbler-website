@@ -1,4 +1,5 @@
 import '@/styles/tailwind.css'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import clsx from 'clsx'
 import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       lang="en"
     >
       <body className="flex h-full flex-col">{children}</body>
+      <GoogleAnalytics gaId="G-NEKXR2X9CT" />
     </html>
   )
 }
