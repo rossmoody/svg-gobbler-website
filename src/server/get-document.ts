@@ -3,15 +3,10 @@
 export async function getDocument(url: string) {
   const controller = new AbortController()
   const signal = controller.signal
-
-  setTimeout(() => controller.abort(), 2000) // abort after 2 seconds
+  setTimeout(() => controller.abort(), 2000)
 
   try {
     const response = await fetch(url, { signal })
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`)
-    }
 
     switch (response.status) {
       case 200:

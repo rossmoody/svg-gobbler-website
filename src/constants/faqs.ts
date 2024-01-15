@@ -15,39 +15,58 @@ export const faqs: Faq[][] = [
       question: 'What browsers does SVG Gobbler work on?',
     },
     {
-      answer:
-        'SVG Gobbler is a long running side project of <a href="https://www.rossmoody.com>Ross Moody</a>.',
+      answer: 'SVG Gobbler is a long running side project of Ross Moody.',
       question: 'Who maintains SVG Gobbler?',
+    },
+    {
+      answer:
+        'Issues, bug reports, and feature requests can be submitted on GitHub. It is a constantly evolving project and we are always looking for ways to improve it.',
+      question:
+        'Are there any known issues or limitations with the current version of SVG Gobbler?',
     },
   ],
   [
     {
-      answer: '',
+      answer:
+        'Yes. SVG Gobbler is open source and contributions are welcome. Follow the link to GitHub from the footer of this page.',
       question: 'Can I contribute to SVG Gobbler?',
     },
     {
-      answer: '',
+      answer:
+        'Feature requests can be submitted on GitHub. Follow the link from the header of this page.',
       question: 'I have an idea for SVG Gobbler, how do I share it?',
     },
     {
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and exporting SVGs.',
       question: 'What is SVG Gobbler and how does it work?',
+    },
+    {
+      answer: 'Follow the link at the top of the page to install SVG Gobbler.',
+      question: 'How do I install SVG Gobbler on my browser?',
+    },
+    {
+      answer:
+        'Not at this time. SVG Gobbler is exclusively for finding SVG content in desktop web browser.',
+      question: 'Is SVG Gobbler compatible with mobile browsers?',
     },
   ],
   [
     {
-      answer: '',
+      answer:
+        'SVG Gobbler finds SVG content on a page in most standard rendering scenarios. There are some known issues with dynamic content especially related to CORS restrictions and embedded webpages. Additionally SVG content rendered from font icons is not currently found.',
       question: 'Can SVG Gobbler work on websites with dynamic content?',
     },
+
     {
-      answer: 'In life it’s really better to never expect anything at all.',
-      question: 'Can we expect more inventory features?',
+      answer:
+        'SVG Gobbler is open-source and free to use. The source code is available on GitHub for anyone to read and ensure the security and privacy is safe.',
+      question: 'How does SVG Gobbler ensure the security and privacy of its users?',
     },
     {
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-      question: 'I lost my password, how do I get into my account?',
+        'This open-source browser extension was made, and is intended to facilitate the downloading of SVG icons from websites for personal, educational, or legitimate professional use. Users are expected to respect intellectual property rights and should not use this tool for infringing upon copyrights or for commercial purposes without proper authorization.',
+      question: 'Can I use SVG Gobbler for commercial purposes?',
     },
   ],
 ]

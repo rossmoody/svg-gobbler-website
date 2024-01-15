@@ -1,35 +1,14 @@
 'use client'
 
-import { getDocument } from '@/server/get-document'
-import clsx from 'clsx'
-import { FormEvent, useState } from 'react'
-import { SvgType, findSvg, svgFactory } from 'svg-gobbler-scripts'
+import { useSiteData } from '@/hooks/use-site-data'
 
 import { Button } from './Button'
+import { NoResults } from './NoResults'
+import { SkeletonLoader } from './SkeletonLoader'
+import { SvgCard } from './SvgCard'
 
 export function HeroSearch() {
-  const [loading, setLoading] = useState(false)
-  const [svgData, setSvgData] = useState<SvgType[]>()
-
-  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
-    const formData = new FormData(e.currentTarget)
-    const url = formData.get('search-input') as string
-
-    try {
-      const { href, origin } = new URL(url)
-      const response = await getDocument(href)
-      const dom = new DOMParser().parseFromString(response, 'text/html')
-      const documentData = findSvg(dom)
-      const svgData = await svgFactory.process({ ...documentData, origin })
-      setSvgData(svgData)
-    } catch (e) {
-      console.log('Error: ', e)
-    }
-
-    setLoading(false)
-  }
+  const { loading, onSubmit, svgData } = useSiteData()
 
   return (
     <div className="mt-10 flex w-full flex-grow flex-col">
@@ -40,10 +19,10 @@ export function HeroSearch() {
               Paste a URL
             </label>
             <input
-              className="h-12 w-full rounded-full border-gray-300 text-slate-800"
+              className="h-12 w-full rounded-full border-gray-300 pl-4 text-slate-800"
               id="search-input"
               name="search-input"
-              placeholder="Search a website for SVGs..."
+              placeholder="Search a website for SVG content"
               required
               type="url"
             />
@@ -80,20 +59,10 @@ export function HeroSearch() {
           </form>
         </div>
       </div>
-      <div className="mt-12 flex flex-wrap gap-2">
-        {svgData?.map((svg) => (
-          <div
-            className="h-40 w-40 rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
-            key={svg.id}
-          >
-            <span
-              className={clsx(
-                '[& > svg]:absolute [& > svg]:inset-0 [& > svg]:inline-block relative inline-block w-full overflow-hidden pb-[100%] align-top',
-              )}
-              dangerouslySetInnerHTML={{ __html: svg.presentationSvg }}
-            />
-          </div>
-        ))}
+      <div className="mt-12 flex flex-wrap justify-center gap-3">
+        {loading && <SkeletonLoader />}
+        {svgData?.length === 0 && <NoResults />}
+        {svgData?.map((svg) => <SvgCard key={svg.id} svg={svg} />)}
       </div>
     </div>
   )
