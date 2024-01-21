@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function CallToAction() {
   return (
-    <section className="relative overflow-hidden bg-red-600 py-32" id="get-started-today">
+    <section className="relative overflow-hidden bg-[#0C0C0F] py-32" id="get-started-today">
       <Image
         alt=""
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
