@@ -28,7 +28,7 @@ export function Hero() {
         <Button href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch">
           Install SVG Gobbler
         </Button>
-        <Button href="https://youtu.be/0GtqUqTgUOg" variant="outline">
+        <Button href="https://youtu.be/0GtqUqTgUOg" target="_blank" variant="outline">
           <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-red-600 group-active:fill-current"
