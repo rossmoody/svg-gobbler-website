@@ -8,6 +8,21 @@ import { PropsWithChildren } from 'react'
 export const metadata: Metadata = {
   description:
     'SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and exporting SVGs like never before.',
+  openGraph: {
+    description:
+      'SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and exporting SVGs like never before.',
+    images: [
+      {
+        alt: 'SVG Gobbler - Find, optimize, organize, edit, and export SVGs like never before',
+        height: 630,
+        url: 'https://svggobbler.com/og-image.png',
+        width: 1200,
+      },
+    ],
+    title: 'SVG Gobbler - Find, optimize, organize, edit, and export SVGs like never before',
+    type: 'website',
+    url: 'https://svggobbler.com',
+  },
   title: {
     default: 'SVG Gobbler - Find, optimize, organize, edit, and export SVGs like never before',
     template: '%s - SVG Gobbler',
