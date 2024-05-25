@@ -54,9 +54,7 @@ export function Header() {
               color="red"
               href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
             >
-              <span>
-                Install extension<span className="hidden lg:inline"> free</span>
-              </span>
+              <span>Get the extension</span>
             </Button>
             <div className="-mr-1 md:hidden">
               <Popover>

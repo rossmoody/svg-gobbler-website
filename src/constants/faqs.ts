@@ -6,10 +6,6 @@ export type Faq = {
 export const faqs: Faq[][] = [
   [
     {
-      answer: 'Yes, SVG Gobbler is free to use.',
-      question: 'Is SVG Gobbler free?',
-    },
-    {
       answer:
         'Browser extensions are going through a rough patch with the introduction of manifest v3 from Chrome. A frozen version of SVG Gobbler is available for Firefox. We are working on a new version of SVG Gobbler that will work on all browsers.',
       question: 'What browsers does SVG Gobbler work on?',
