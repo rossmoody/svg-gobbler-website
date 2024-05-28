@@ -18,6 +18,7 @@ export default function UninstallPage() {
         meet your needs. <i>Include your email if you want us to follow up.</i>
       </p>
       <form data-netlify="true" method="POST" name="uninstall">
+        <input name="form-name" type="hidden" value="uninstall" />
         <textarea
           autoFocus
           className="mt-6 h-32 w-full rounded-md border border-gray-300 p-4 text-sm"
