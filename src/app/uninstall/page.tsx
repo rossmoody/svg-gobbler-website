@@ -1,10 +1,11 @@
 import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
+import { SlimLayout } from '@/components/SlimLayout'
 import Link from 'next/link'
 
 export default function UninstallPage() {
   return (
-    <div>
+    <SlimLayout>
       <div className="flex">
         <Link aria-label="Home" href="/">
           <Logo className="h-7 w-auto" />
@@ -18,7 +19,7 @@ export default function UninstallPage() {
         meet your needs. <i>Include your email if you want us to follow up.</i>
       </p>
       <form
-        action="/"
+        action="/thank-you"
         data-netlify="true"
         method="POST"
         name="uninstall"
@@ -30,10 +31,10 @@ export default function UninstallPage() {
           name="feedback"
           placeholder="The extension wasn't able to...."
         />
-        <Button className="mt-4 w-full" color="red" type="submit">
+        <Button className="mt-4" color="red" type="submit">
           Submit feedback
         </Button>
       </form>
-    </div>
+    </SlimLayout>
   )
 }
