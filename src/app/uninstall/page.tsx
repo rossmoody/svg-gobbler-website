@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
 import Link from 'next/link'
@@ -19,13 +17,7 @@ export default function UninstallPage() {
         Your feedback is important and it&apos;s critical we understand how SVG Gobbler didn&apos;t
         meet your needs. <i>Include your email if you want us to follow up.</i>
       </p>
-      <form
-        method="post"
-        name="uninstall"
-        onSubmit={() => {
-          console.log('submitted')
-        }}
-      >
+      <form data-netlify="true" method="POST" name="uninstall" netlify-honeypot="bot-field">
         <input name="form-name" type="hidden" value="uninstall" />
         <textarea
           autoFocus
