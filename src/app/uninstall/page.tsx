@@ -17,7 +17,13 @@ export default function UninstallPage() {
         Your feedback is important and it&apos;s critical we understand how SVG Gobbler didn&apos;t
         meet your needs. <i>Include your email if you want us to follow up.</i>
       </p>
-      <form data-netlify="true" method="POST" name="uninstall">
+      <form
+        method="post"
+        name="uninstall"
+        onSubmit={() => {
+          console.log('submitted')
+        }}
+      >
         <input name="form-name" type="hidden" value="uninstall" />
         <textarea
           autoFocus
