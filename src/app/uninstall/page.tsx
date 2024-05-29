@@ -16,7 +16,7 @@ export default function UninstallPage() {
       </h1>
       <p className="mt-2 text-sm text-gray-700">
         Your feedback is important and it&apos;s critical we understand how SVG Gobbler didn&apos;t
-        meet your needs. <i>Include your email if you want us to follow up.</i>
+        meet your needs.
       </p>
       <form
         action="/thank-you"
@@ -30,6 +30,7 @@ export default function UninstallPage() {
           className="mt-6 h-32 w-full rounded-md border border-gray-300 p-4 text-sm"
           name="feedback"
           placeholder="The extension wasn't able to...."
+          required
         />
         <Button className="mt-4" color="red" type="submit">
           Submit feedback
