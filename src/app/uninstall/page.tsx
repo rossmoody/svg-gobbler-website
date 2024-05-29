@@ -28,10 +28,12 @@ export default function UninstallPage() {
         <textarea
           autoFocus
           className="mt-6 h-32 w-full rounded-md border border-gray-300 p-4 text-sm"
+          minLength={25}
           name="feedback"
           placeholder="The extension wasn't able to...."
           required
         />
+
         <Button className="mt-4" color="red" type="submit">
           Submit feedback
         </Button>
