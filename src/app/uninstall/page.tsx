@@ -12,11 +12,10 @@ export default function UninstallPage() {
         </Link>
       </div>
       <h1 className="mt-12 text-xl font-semibold text-gray-900">
-        Real quick, why did you uninstall?
+        Why did you uninstall SVG Gobbler?
       </h1>
       <p className="mt-2 text-sm text-gray-700">
-        Your feedback is important and it&apos;s critical we understand how SVG Gobbler didn&apos;t
-        meet your needs.
+        Help me make the extension better by sharing your feedback.
       </p>
       <form
         action="/thank-you"
