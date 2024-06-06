@@ -15,7 +15,8 @@ export default function UninstallPage() {
         Why did you uninstall SVG Gobbler?
       </h1>
       <p className="mt-2 text-sm text-gray-700">
-        Help me make the extension better by sharing your feedback.
+        Help make the extension better by sharing your feedback. It goes directly to me, Ross, the
+        creator of SVG Gobbler.
       </p>
       <form
         action="/thank-you"
