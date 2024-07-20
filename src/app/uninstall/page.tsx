@@ -12,7 +12,7 @@ export default function UninstallPage() {
         </Link>
       </div>
       <h1 className="mt-12 text-xl font-semibold text-gray-900">
-        Why did you uninstall SVG Gobbler?
+        Why didn&apos;t SVG Gobbler work for you?
       </h1>
       <p className="mt-2 text-sm text-gray-700">
         Help make the extension better by sharing your feedback. It goes directly to me, Ross, the
@@ -33,7 +33,10 @@ export default function UninstallPage() {
           placeholder="The extension wasn't able to...."
           required
         />
-
+        <label className="mt-4 text-sm text-gray-700" htmlFor="email">
+          Email (optional)
+        </label>
+        <input name="email" type="email" />
         <Button className="mt-4" color="red" type="submit">
           Submit feedback
         </Button>
