@@ -15,8 +15,7 @@ export default function UninstallPage() {
         Why didn&apos;t SVG Gobbler work for you?
       </h1>
       <p className="mt-2 text-sm text-gray-700">
-        Help make the extension better by sharing your feedback. It goes directly to me, Ross, the
-        creator of SVG Gobbler.
+        Help make the extension better by sharing your feedback.
       </p>
       <form
         action="/thank-you"
@@ -27,19 +26,17 @@ export default function UninstallPage() {
       >
         <textarea
           autoFocus
-          className="mt-6 h-32 w-full rounded-md border border-gray-300 p-4 text-sm"
+          className="mb-2 mt-6 h-32 w-full rounded-md border border-gray-300 p-4 text-sm"
           minLength={25}
           name="feedback"
           placeholder="The extension wasn't able to...."
           required
         />
-        <label className="mt-4 text-sm text-gray-700" htmlFor="email">
-          Email (optional)
-        </label>
-        <input name="email" type="email" />
-        <Button className="mt-4" color="red" type="submit">
-          Submit feedback
-        </Button>
+        <div className="flex gap-2">
+          <Button className="mt-4" color="red" type="submit">
+            Send feedback
+          </Button>
+        </div>
       </form>
     </SlimLayout>
   )
