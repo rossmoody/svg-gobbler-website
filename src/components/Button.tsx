@@ -25,20 +25,20 @@ const variantStyles = {
 }
 
 type ButtonProps = (
-  | {
-      color?: keyof typeof variantStyles.outline
-      variant: 'outline'
-    }
-  | {
-      color?: keyof typeof variantStyles.solid
-      variant?: 'solid'
-    }
+  | ({
+      href?: undefined
+    } & Omit<React.ComponentPropsWithoutRef<'button'>, 'color'>)
+  | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
 ) &
   (
-    | (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
-        href?: undefined
-      })
-    | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
+    | {
+        color?: keyof typeof variantStyles.outline
+        variant: 'outline'
+      }
+    | {
+        color?: keyof typeof variantStyles.solid
+        variant?: 'solid'
+      }
   )
 
 export function Button({ className, ...props }: ButtonProps) {

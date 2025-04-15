@@ -1,7 +1,7 @@
 'use client'
 
 import { Container } from '@/components/Container'
-import { Feature, features } from '@/constants/features'
+import { type Feature, features } from '@/constants/features'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -11,10 +11,10 @@ function Feature({
   feature,
   isActive,
   ...props
-}: React.ComponentPropsWithoutRef<'div'> & {
+}: {
   feature: Feature
   isActive: boolean
-}) {
+} & React.ComponentPropsWithoutRef<'div'>) {
   return (
     <div className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')} {...props}>
       <div
