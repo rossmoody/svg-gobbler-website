@@ -12,6 +12,13 @@ import { Fragment } from 'react'
 import { Logomark } from './Logomark'
 import { MobileNavLink } from './MobileNavLink'
 
+export const extensionLink = () => {
+  if (typeof window !== 'undefined' && window.navigator.userAgent.includes('Firefox')) {
+    return 'https://addons.mozilla.org/en-US/firefox/addon/svg-gobbler/'
+  }
+  return 'https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch'
+}
+
 export function Header() {
   return (
     <header className="py-10">
@@ -50,10 +57,7 @@ export function Header() {
                 Star on GitHub
               </a>
             </div>
-            <Button
-              color="red"
-              href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch"
-            >
+            <Button color="red" href={extensionLink()}>
               <span>Get the extension</span>
             </Button>
             <div className="-mr-1 md:hidden">

@@ -1,6 +1,7 @@
 import { Container } from '@/components/Container'
 
 import { Button } from './Button'
+import { extensionLink } from './Header'
 
 export function Hero() {
   return (
@@ -25,9 +26,7 @@ export function Hero() {
         exporting SVGs like never before.
       </h2>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="https://chromewebstore.google.com/detail/svg-gobbler/mpbmflcodadhgafbbakjeahpandgcbch">
-          Get the extension
-        </Button>
+        <Button href={extensionLink()}>Get the extension</Button>
         <Button href="https://youtu.be/0GtqUqTgUOg" target="_blank" variant="outline">
           <svg
             aria-hidden="true"
