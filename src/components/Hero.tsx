@@ -1,3 +1,5 @@
+'use client'
+
 import { Container } from '@/components/Container'
 
 import { Button } from './Button'
