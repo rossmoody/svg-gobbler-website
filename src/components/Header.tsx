@@ -54,7 +54,7 @@ export function Header() {
                     fillRule="evenodd"
                   />
                 </svg>
-                Star on GitHub
+                900+ Stars on GitHub
               </a>
             </div>
             <Button color="red" href={extensionLink()}>
