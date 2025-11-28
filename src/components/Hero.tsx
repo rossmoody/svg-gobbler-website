@@ -1,11 +1,34 @@
 'use client'
 
 import { Container } from '@/components/Container'
+import { useState } from 'react'
 
 import { Button } from './Button'
 import { extensionLink } from './Header'
 
+const countStartingPointNov2025 = 2000000
+
+function formatNumberWithCommas(num: number) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
+function getTotalFromRecords(records: Record<string, number>) {
+  return Object.values(records).reduce((a, b) => a + b, 0)
+}
+
 export function Hero() {
+  const [count, setCount] = useState(countStartingPointNov2025)
+
+  setTimeout(async () => {
+    try {
+      const response = await fetch('/api/get-counter')
+      const { data } = await response.json()
+      setCount(countStartingPointNov2025 + getTotalFromRecords(data))
+    } catch (error) {
+      console.error(error)
+    }
+  }, 2000)
+
   return (
     <Container className="pb-16 pt-16 text-center lg:pt-24">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
@@ -23,9 +46,11 @@ export function Hero() {
         </span>{' '}
         for designers & developers
       </h1>
-      <h2 className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        SVG Gobbler is a browser extension for finding, optimizing, organizing, editing, and
-        exporting SVGs like never before.
+      <h2 className="mx-auto mt-6 max-w-2xl text-xl tracking-tight text-slate-700">
+        SVG Gobbler is helping over <span className="font-medium">75,000</span> designers and
+        developers find, optimize, edit, and export{' '}
+        <span className="font-medium text-red-600">{formatNumberWithCommas(count)}</span> SVGs and
+        counting
       </h2>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href={extensionLink()}>Get the extension</Button>
