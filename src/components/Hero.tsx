@@ -1,7 +1,7 @@
 'use client'
 
 import { Container } from '@/components/Container'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Button } from './Button'
 import { extensionLink } from './Header'
@@ -16,18 +16,36 @@ function getTotalFromRecords(records: Record<string, number>) {
   return Object.values(records).reduce((a, b) => a + b, 0)
 }
 
+function fetchCounterData() {
+  return fetch('/api/get-counter')
+    .then((response) => response.json())
+    .then(({ data }) => getTotalFromRecords(data))
+    .catch((error) => {
+      console.error(error)
+      return 0
+    })
+}
+
 export function Hero() {
   const [count, setCount] = useState(countStartingPointNov2025)
 
-  setTimeout(async () => {
-    try {
-      const response = await fetch('/api/get-counter')
-      const { data } = await response.json()
-      setCount(countStartingPointNov2025 + getTotalFromRecords(data))
-    } catch (error) {
-      console.error(error)
-    }
-  }, 2000)
+  useEffect(() => {
+    fetchCounterData().then((fetchedCount) => {
+      if (fetchedCount > 0) {
+        setCount(countStartingPointNov2025 + fetchedCount)
+      }
+    })
+
+    const interval = setInterval(() => {
+      fetchCounterData().then((fetchedCount) => {
+        if (fetchedCount > 0) {
+          setCount(countStartingPointNov2025 + fetchedCount)
+        }
+      })
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <Container className="pb-16 pt-16 text-center lg:pt-24">
