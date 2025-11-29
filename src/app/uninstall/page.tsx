@@ -11,10 +11,8 @@ export default function UninstallPage() {
           <Logo className="h-7 w-auto" />
         </Link>
       </div>
-      <h1 className="mt-12 text-2xl font-semibold text-gray-900">Why did you uninstall?</h1>
-      <p className="mt-2 text-gray-700">
-        What didn&apos;t it do that you expected? Your feedback helps me improve the extension.
-      </p>
+      <h1 className="mt-12 text-2xl font-semibold text-gray-900">Got an app idea?</h1>
+      <p className="mt-2 text-gray-700">What do you want to see made?</p>
       <form
         action="/thank-you"
         data-netlify="true"
@@ -27,12 +25,12 @@ export default function UninstallPage() {
           className="mb-2 mt-6 h-32 w-full rounded-md border border-gray-300 p-4 text-sm"
           minLength={20}
           name="feedback"
-          placeholder="The extension wasn't able to...."
+          placeholder="I wish I had an app that..."
           required
         />
         <div className="flex gap-2">
           <Button className="mt-4" color="red" type="submit">
-            Send feedback
+            Send idea
           </Button>
         </div>
       </form>
