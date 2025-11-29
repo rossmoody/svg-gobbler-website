@@ -16,14 +16,15 @@ function getTotalFromRecords(records: Record<string, number>) {
   return Object.values(records).reduce((a, b) => a + b, 0)
 }
 
-function fetchCounterData() {
-  return fetch('/api/get-counter')
-    .then((response) => response.json())
-    .then(({ data }) => getTotalFromRecords(data))
-    .catch((error) => {
-      console.error(error)
-      return 0
-    })
+async function fetchCounterData() {
+  try {
+    const response = await fetch('/api/get-counter')
+    const { data } = await response.json()
+    return getTotalFromRecords(data)
+  } catch (error) {
+    console.error(error)
+    return 0
+  }
 }
 
 export function Hero() {
