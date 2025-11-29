@@ -35,16 +35,6 @@ export function Hero() {
         setCount(countStartingPointNov2025 + fetchedCount)
       }
     })
-
-    const interval = setInterval(() => {
-      fetchCounterData().then((fetchedCount) => {
-        if (fetchedCount > 0) {
-          setCount(countStartingPointNov2025 + fetchedCount)
-        }
-      })
-    }, 5000)
-
-    return () => clearInterval(interval)
   }, [])
 
   return (
