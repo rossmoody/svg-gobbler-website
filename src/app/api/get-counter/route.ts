@@ -4,6 +4,7 @@ export async function GET(request: Request) {
   try {
     const response = await fetch(
       `https://storage.googleapis.com/svg-gobbler/counter/counter.json?v=${Date.now()}`,
+      { cache: 'no-store' },
     )
     const data = await response.json()
     return NextResponse.json({ data }, { status: 200 })

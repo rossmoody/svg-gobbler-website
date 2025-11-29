@@ -17,7 +17,7 @@ function getTotalFromRecords(records: Record<string, number>) {
 }
 
 function fetchCounterData() {
-  return fetch('/api/get-counter', { cache: 'no-store' })
+  return fetch('/api/get-counter')
     .then((response) => response.json())
     .then(({ data }) => getTotalFromRecords(data))
     .catch((error) => {
