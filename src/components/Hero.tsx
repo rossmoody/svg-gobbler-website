@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { Button } from './Button'
 import { extensionLink } from './Header'
 
-const countStartingPointNov2025 = 2000000
+const countStartingPointNov2025 = 365000000
 
 function formatNumberWithCommas(num: number) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
