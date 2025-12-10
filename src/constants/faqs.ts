@@ -7,7 +7,7 @@ export const faqs: Faq[][] = [
   [
     {
       answer:
-        'Browser extensions are going through a rough patch with the introduction of manifest v3 from Chrome. A frozen version of SVG Gobbler is available for Firefox. We are working on a new version of SVG Gobbler that will work on all browsers.',
+        'This extension works in all Chromium-based browsers including Google Chrome, Microsoft Edge, Brave, and others. It also works in Firefox.',
       question: 'What browsers does SVG Gobbler work on?',
     },
     {
@@ -54,6 +54,21 @@ export const faqs: Faq[][] = [
       answer:
         'SVG Gobbler is open-source and free to use. The source code is available on GitHub for anyone to read and ensure the security and privacy is safe.',
       question: 'How does SVG Gobbler ensure the security and privacy of its users?',
+    },
+    {
+      answer:
+        'SVG Gobbler supports exporting SVGs individually or in bulk. Supported formats include SVG, PNG, and ZIP archives.',
+      question: 'What export options does SVG Gobbler offer?',
+    },
+    {
+      answer:
+        'SVG Gobbler requires permissions to read and modify data on the websites you visit in order to find and extract SVG content. These permissions are necessary for the extension to function properly. We request the minimum permissions needed to provide the core functionality of the extension.',
+      question: 'Why does SVG Gobbler require certain permissions in my browser?',
+    },
+    {
+      answer:
+        'SVG Gobbler is free to use. There are no costs associated with downloading or using the extension.',
+      question: 'Is SVG Gobbler free to use?',
     },
     {
       answer:
