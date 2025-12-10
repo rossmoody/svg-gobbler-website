@@ -20,6 +20,11 @@ export const faqs: Faq[][] = [
       question:
         'Are there any known issues or limitations with the current version of SVG Gobbler?',
     },
+    {
+      answer:
+        'SVG Gobbler is free to use. There are no costs associated with downloading or using the extension.',
+      question: 'Is SVG Gobbler free to use?',
+    },
   ],
   [
     {
@@ -41,6 +46,11 @@ export const faqs: Faq[][] = [
       answer:
         'Not at this time. SVG Gobbler is exclusively for finding SVG content in desktop web browser.',
       question: 'Is SVG Gobbler compatible with mobile browsers?',
+    },
+    {
+      answer:
+        'This open-source browser extension was made, and is intended to facilitate the downloading of SVG icons from websites for personal, educational, or legitimate professional use. Users are expected to respect intellectual property rights and should not use this tool for infringing upon copyrights or for commercial purposes without proper authorization.',
+      question: 'Can I use SVG Gobbler for commercial purposes?',
     },
   ],
   [
@@ -64,16 +74,6 @@ export const faqs: Faq[][] = [
       answer:
         'SVG Gobbler requires permissions to read and modify data on the websites you visit in order to find and extract SVG content. These permissions are necessary for the extension to function properly. We request the minimum permissions needed to provide the core functionality of the extension.',
       question: 'Why does SVG Gobbler require certain permissions in my browser?',
-    },
-    {
-      answer:
-        'SVG Gobbler is free to use. There are no costs associated with downloading or using the extension.',
-      question: 'Is SVG Gobbler free to use?',
-    },
-    {
-      answer:
-        'This open-source browser extension was made, and is intended to facilitate the downloading of SVG icons from websites for personal, educational, or legitimate professional use. Users are expected to respect intellectual property rights and should not use this tool for infringing upon copyrights or for commercial purposes without proper authorization.',
-      question: 'Can I use SVG Gobbler for commercial purposes?',
     },
   ],
 ]
